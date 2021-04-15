@@ -1,0 +1,57 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group" style="width: 60%;">
+        <div class="col-sm-10">
+            <label for="dep1" class="fw-bolder">Employee Name:</label>
+            <input id="dep1" type="text" class="form-control" [(ngModel)]="EmployeeName" placeholder="Enter Employee Name">
+        </div>
+        
+        <br/>
+        
+        <div class="col-sm-10">
+            <label for="dep2" class="fw-bolder">Department:</label>
+            <!-- <select id=dep2 class="form-control" [(ngModel)]="Department">
+                <option *ngFor="let department of DepartmentsList" [ngValue] = "{DepartmentId: department.DepartmentId, DepartmentName: department.DepartmentName}">
+                    {{department.DepartmentName}}
+                </option>
+            </select> -->
+
+            <select id=dep2 class="form-control" [(ngModel)]="DepartmentId">
+                <option [value]="department.DepartmentId" *ngFor="let department of DepartmentsList">
+                    {{department.DepartmentName}}
+                </option>
+            </select>
+        </div>    
+
+        <br/>
+
+        <div class="col-10">
+            <label for="dep3" class="fw-bolder">StartDate:</label>
+            <input id="dep3" type="date" class="form-control" [(ngModel)]="StartDate" name="StartDate">
+        </div>
+    </div>
+    
+    <div class="ml-3 bd-highlight" style="width: 40%;">
+        <img [src]=PhotoFilePath height="250px;" width="200px;">
+        <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col col-lg-2">
+      </div>
+      <div class="col-md-auto">
+        <button (click)="addEmployee()" *ngIf="Employee.EmployeeId == 0" class="btn btn-primary">
+            Add
+        </button>
+        
+        <button (click)="updateEmployee()" *ngIf="Employee.EmployeeId != 0" class="btn btn-primary">
+            Update
+        </button>
+      </div>
+      <div class="col col-lg-2">
+      </div>
+</div>
+
+
+
+

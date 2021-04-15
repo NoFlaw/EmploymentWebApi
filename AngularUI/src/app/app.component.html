@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="jumbotron">
+    <h1 class="d-flex justify-content-center display-4">Employee Management Portal</h1>
+    <p class="d-flex justify-content-center lead">Angular, Swagger, ASP.NET Core - WebAPI, EFCore, SQL Server</p>
+    <hr class="my-4">
+  </div>
+
+  <!-- <h3 class="d-flex justify-content-center">Angular, ASP.NET Core, EFCore, Swagger - App Demo</h3>
+  <h3 class="d-flex justify-content-center">Employee Management Portal</h3> -->
+
+  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+    <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item">
+        <button routerLink="employee" class="m-1 btn btn-light btn-outline-primary" Button>Employees</button>  
+      </li>
+      <li class="nav-item">
+        <button routerLink="department" class="m-1 btn btn-light btn-outline-primary" Button>Departments</button>
+      </li>
+    </ul>
+  </nav>
+
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  <footer class="mt-auto float-right">
+    <p>&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &copy;Copyright {{currentYear}} Brenton Bates</p>
+  </footer>
+</div>
+
+
